@@ -1,0 +1,283 @@
+# font
+font pango:ubuntu mono 10
+
+# define colors
+# badwolf:
+set $plain            #f8f6f2
+set $snow             #ffffff
+set $coal             #000000
+set $bg               #121212
+
+set $brightgravel     #d9cec3
+set $lightgravel      #998f84
+set $gravel           #857f78
+set $mediumgravel     #666462
+set $deepgravel       #45413b 
+set $deepergravel     #35322d 
+set $darkgravel       #242321 
+set $blackgravel      #1c1b1a  
+set $blackestgravel   #141413
+
+set $dalespale        #fade3e 
+set $dirtyblonde      #f4cf86 
+set $taffy            #ff2c4b 
+set $saltwatertaffy   #8cffba 
+set $tardis           #0a9dff 
+set $orange           #ffa724 
+set $lime             #aeee00 
+set $dress            #ff9eb8 
+set $toffee           #b88853 
+set $coffee           #c7915b 
+set $darkroast        #88633f 
+
+# gruvbox:
+set $g_bg         #1d2021
+set $g_fg         #ebdbb2
+set $g_color0     #282828
+set $g_color8     #928374
+set $g_color1     #cc241d
+set $g_color9     #fb4934
+set $g_color2     #98971a
+set $g_color10    #b8bb26
+set $g_color3     #d79921
+set $g_color11    #fabd2f
+set $g_color4     #458588
+set $g_color12    #83a598
+set $g_color5     #b16286
+set $g_color13    #d3869b
+set $g_color6     #689d6a
+set $g_color14    #8ec07c
+set $g_color7     #a89984
+set $g_color15    #ebdbb2
+
+# define workspace names
+set $ws1    "1" 
+set $ws2    "2" 
+set $ws3    "3" 
+set $ws4    "4" 
+set $ws5    "5" 
+set $ws6    "6" 
+set $ws7    "7" 
+set $ws8    "8" 
+set $ws9    "9" 
+set $ws10   "10"
+
+# define movement keys
+set $up k
+set $down j
+set $left h
+set $right l
+
+# set global gap size [gaps inner <px>] & [gaps outer<px>]
+gaps inner 8
+
+# gaps will only be used if there is more than one container
+smart_gaps on
+
+# draw borders around a container only if it isn't the only container
+smart_borders on
+
+# 2 pixel border - no titlebars
+for_window [class="^.*"] border pixel 2
+
+# use Mouse+Mod1 to drag floating windows to their wanted position
+floating_modifier Mod1
+
+# start a terminal
+bindsym Mod1+Return exec i3-sensible-terminal
+
+# kill focused window
+bindsym Mod1+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym Mod1+d exec dmenu_run -fn 'Ubuntu Mono-9' -nb '#1d2021' -nf '#ebdbb2' -sb '#458588' -sf '#ebdbb2'
+
+# change focus
+bindsym Mod1+$left focus left
+bindsym Mod1+$down focus down
+bindsym Mod1+$up focus up
+bindsym Mod1+$right focus right
+
+# alternatively, you can use the cursor keys:
+bindsym Mod1+Left focus left
+bindsym Mod1+Down focus down
+bindsym Mod1+Up focus up
+bindsym Mod1+Right focus right
+
+# move focused window
+bindsym Mod1+Shift+$left move left
+bindsym Mod1+Shift+$down move down
+bindsym Mod1+Shift+$up move up
+bindsym Mod1+Shift+$right move right
+
+# alternatively, you can use the cursor keys:
+bindsym Mod1+Shift+Left move left
+bindsym Mod1+Shift+Down move down
+bindsym Mod1+Shift+Up move up
+bindsym Mod1+Shift+Right move right
+
+# split in horizontal orientation
+bindsym Mod1+m split h
+
+# split in vertical orientation
+bindsym Mod1+n split v
+
+# enter fullscreen mode for the focused container
+bindsym Mod1+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym Mod1+s layout stacking
+bindsym Mod1+w layout tabbed
+bindsym Mod1+e layout toggle split
+
+# toggle tiling / floating
+bindsym Mod1+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym Mod1+space focus mode_toggle
+
+# move the currently focused window to the scratchpad
+bindsym Mod1+Shift+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym Mod1+minus scratchpad show
+
+# switch to workspace 
+bindsym Mod1+1 workspace $ws1 
+bindsym Mod1+2 workspace $ws2 
+bindsym Mod1+3 workspace $ws3 
+bindsym Mod1+4 workspace $ws4 
+bindsym Mod1+5 workspace $ws5 
+bindsym Mod1+6 workspace $ws6 
+bindsym Mod1+7 workspace $ws7 
+bindsym Mod1+8 workspace $ws8 
+bindsym Mod1+9 workspace $ws9 
+bindsym Mod1+0 workspace $ws10 
+
+# move focused container to workspace 
+bindsym Mod1+Shift+1 move container to workspace $ws1 
+bindsym Mod1+Shift+2 move container to workspace $ws2 
+bindsym Mod1+Shift+3 move container to workspace $ws3 
+bindsym Mod1+Shift+4 move container to workspace $ws4 
+bindsym Mod1+Shift+5 move container to workspace $ws5 
+bindsym Mod1+Shift+6 move container to workspace $ws6 
+bindsym Mod1+Shift+7 move container to workspace $ws7 
+bindsym Mod1+Shift+8 move container to workspace $ws8 
+bindsym Mod1+Shift+9 move container to workspace $ws9 
+bindsym Mod1+Shift+0 move container to workspace $ws10
+
+# reload the configuration file 
+bindsym Mod1+Shift+c reload 
+
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3) 
+bindsym Mod1+Shift+r restart 
+
+# exit i3 (logs you out of your X session) 
+bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'" 
+# resize window (you can also use the mouse for that) 
+
+mode "resize" { 
+    # These bindings trigger as soon as you enter the resize mode 
+
+    # Pressing left will shrink the window’s width.  
+    # Pressing right will grow the window’s width.  
+    # Pressing up will shrink the window’s height.  
+    # Pressing down will grow the window’s height.  
+    bindsym $left       resize shrink width 5 px or 5 ppt
+    bindsym $down       resize grow height 5 px or 5 ppt
+    bindsym $up         resize shrink height 5 px or 5 ppt
+    bindsym $right      resize grow width 5 px or 5 ppt
+
+    # same bindings, but for the arrow keys
+    bindsym Left        resize shrink width 5 px or 5 ppt
+    bindsym Down        resize grow height 5 px or 5 ppt
+    bindsym Up          resize shrink height 5 px or 5 ppt
+    bindsym Right       resize grow width 5 px or 5 ppt
+
+    # back to normal: Enter or Escape or Mod1+r
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym Mod1+r mode "default"
+}
+
+bindsym Mod1+r mode "resize"
+
+# borders
+# class                 border  backgr. text    indicator child_border
+# badwolf:
+#client.focused          $bg     $bg     $bg     $darkroast $lightgravel
+#client.focused_inactive $bg     $bg     $bg     $bg        $bg
+#client.unfocused        $bg     $bg     $bg     $bg        $bg
+#client.urgent           $taffy  $bg     $bg     $bg        $taffy
+#client.background       $bg
+
+# gruvbox:
+client.focused          $g_bg     $g_bg $g_bg $g_color0 $g_color8
+client.focused_inactive $g_bg     $g_bg $g_bg $g_bg     $g_bg
+client.unfocused        $g_bg     $g_bg $g_bg $g_bg     $g_bg
+client.urgent           $g_color9 $g_bg $g_bg $g_bg     $g_color9
+client.background       $g_bg
+
+
+## badwolf bar:
+#bar {
+#        status_command i3status | ~/.i3/i3spotifystatus/pystatus.py
+#        separator_symbol "|"
+#        
+#        # disable scrolling to change workspaces
+#        bindsym button4 nop
+#        bindsym button5 nop
+#
+#        colors {
+#            background $bg
+#            statusline $plain
+#            separator  $plain
+#
+#            # <colorclass>       <bord.> <bkgd.> <text>
+#            focused_workspace    $deepgravel    $deepgravel      $plain
+#            inactive_workspace   $bg  $bg    $plain
+#            urgent_workspace     $taffy     $taffy       $plain
+#        }
+#}
+
+# gruvbox bar:
+bar {
+        status_command i3blocks
+        separator_symbol "|"
+        
+        # disable scrolling to change workspaces
+        bindsym button4 nop
+        bindsym button5 nop
+
+        colors {
+            background $g_bg
+            statusline $g_fg
+            separator  $g_fg
+
+            # <colorclass>       <bord.> <bkgd.> <text>
+            focused_workspace    $g_color4 $g_color4 $g_fg
+            inactive_workspace   $g_bg     $g_bg     $g_fg
+            urgent_workspace     $g_color9 $g_color9 $g_fg
+        }
+}
+
+# screen brightness controls
+bindsym XF86MonBrightnessUp exec "light -A 5"
+bindsym XF86MonBrightnessDown exec "light -U 5"
+
+# audio controls
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks 
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
+
+# key indicators
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+
+# startup execs 
+exec --no-startup-id feh --bg-tile ~/Dropbox/Wallpapers/tiled/dark_embroidery.png
+exec --no-startup-id dropbox
+exec --no-startup-id nm-applet
+exec --no-startup-id xrdb -merge ~/.Xresources
+exec --no-startup-id dunst

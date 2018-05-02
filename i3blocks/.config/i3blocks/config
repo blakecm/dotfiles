@@ -1,0 +1,76 @@
+# i3blocks config file
+
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+command=/usr/lib/i3blocks/$BLOCK_NAME
+markup=pango
+
+[keyindicator]
+command=~/.config/i3blocks/scripts/keyindicator/keyindicator --hide
+instance=CAPS
+interval=once
+signal=11
+
+[keyindicator]
+command=~/.config/i3blocks/scripts/keyindicator/keyindicator --hide
+instance=NUM
+interval=once
+signal=11
+
+[pacman-updates]
+label= 
+command=~/.config/i3blocks/scripts/arch-update/arch-update.py -a -u "#ebdbb2" -q
+interval= 3600
+
+[mediaplayer]
+label= 
+command=~/.config/i3blocks/scripts/mediaplayer/mediaplayer
+instance=spotify
+interval=5
+signal=10
+
+[volume-pulseaudio]
+command=~/.config/i3blocks/scripts/volume-pulseaudio/volume-pulseaudio -F 3 -C "#ebdbb2" -c "#d79921"
+interval=once
+signal=1
+
+[wifi]
+label= 
+command=~/.config/i3blocks/scripts/wifi/wifi
+instance=wlp2s0
+interval=60
+
+[battery2]
+command=~/.config/i3blocks/scripts/battery2/battery2
+interval=30
+
+[time]
+label= 
+instance=%B %d
+command=~/.config/i3blocks/scripts/time/time
+interval=1
+
+[time]
+label= 
+instance=%I:%M %P
+command=~/.config/i3blocks/scripts/time/time
+interval=1

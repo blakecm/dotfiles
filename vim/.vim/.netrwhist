@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/blakecm/Dropbox/school/2018_spring/android/Aubie_Memory_Game/app/src/main/java/edu/auburn'
+let g:netrw_dirhist_2='/home/blakecm/Dropbox/school/2018_spring/android/Aubie_Memory_Game/app/src/main/java/edu/auburn/eng'
+let g:netrw_dirhist_3='/home/blakecm/Dropbox/school/2018_spring/android/Aubie_Memory_Game/app/src/main/java/edu/auburn/eng/csse'
+let g:netrw_dirhist_4='/home/blakecm/Dropbox/school/2018_spring/android/Aubie_Memory_Game/app/src/main/java/edu/auburn/eng/csse/comp3710'
+let g:netrw_dirhist_5='/home/blakecm/Dropbox/school/2018_spring/android/Aubie_Memory_Game/app/src/main/java/edu/auburn/eng/csse/comp3710/spring2018'
+let g:netrw_dirhist_6='/home/blakecm/Dropbox/school/2018_spring/android/Aubie_Memory_Game/app/src/main/java/edu/auburn/eng/csse/comp3710/spring2018/TeamBlakeDonJordan'
+let g:netrw_dirhist_7='/home/blakecm/.config/i3status'
