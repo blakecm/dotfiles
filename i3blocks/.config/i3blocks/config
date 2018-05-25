@@ -36,10 +36,15 @@ instance=NUM
 interval=once
 signal=11
 
-[pacman-updates]
-label= 
-command=~/.config/i3blocks/scripts/arch-update/arch-update.py -a -u "#ebdbb2" -q
-interval= 3600
+[apt-upgrades]
+command=~/.config/i3blocks/scripts/apt-upgrades/apt-upgrades -s "\uf021  " -c "#98971a" -N
+signal=1
+interval=once
+
+#[pacman-updates]
+#label= 
+#command=~/.config/i3blocks/scripts/arch-update/arch-update.py -a -u "#ebdbb2" -q
+#interval= 3600
 
 [mediaplayer]
 label= 

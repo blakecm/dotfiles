@@ -32,12 +32,12 @@ set clipboard=unnamedplus
 " gruvbox colorscheme "
 "---------------------"
 " must be set before colorscheme
-let g:gruvbox_italic=1
-colorscheme gruvbox
-set background=dark
-let g:gruvbox_contrast_dark="hard"
-" match terminal background color
-highlight Normal ctermbg=NONE
+"let g:gruvbox_italic=1
+"colorscheme gruvbox
+"set background=dark
+"let g:gruvbox_contrast_dark="hard"
+"" match terminal background color
+"highlight Normal ctermbg=NONE
 
 "---------------------"
 " badwolf colorscheme "
@@ -54,11 +54,11 @@ let g:ycm_server_python_interpreter = '/usr/bin/python2'
 " lightline settings "
 "--------------------"
 set laststatus=2
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'gruvbox',
+"      \ }
 
-"------------------"
-" vimwiki settings "
-" -----------------"
-let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+"--------------------"
+" vim-notes settings "
+"--------------------"
+let g:notes_suffix = '.txt'

@@ -115,3 +115,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+alias androidproj='cd ~/Dropbox/school/2018_spring/android/Aubie_Memory_Game/app/'
